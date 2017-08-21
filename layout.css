@@ -11,8 +11,7 @@ div{
   z-index: 2;
 }
 body {
-  background-color: #888;
-  color: #888;
+  background-color: #FFD8FA;
   font-family: 'Pacifico', sans-serif;
   font-weight: 400;
 }
@@ -54,7 +53,7 @@ body {
     font-size: 1.0em;
     text-align: right;
   }
-  .share-button {
+  .share-buttons {
     width: 450px;
     margin: auto;
     display: block;
@@ -79,12 +78,13 @@ body {
         padding-top: 8px;
         text-align: center;
         font-size: 1.2em;
-        margin-right: 5px;
+        margin-right: 35px;
         height: 30px;
         width: 40px;
       }
       &#quote-button{
         float: right;
+        background-color: #9B4990;
       }
     }
   }
