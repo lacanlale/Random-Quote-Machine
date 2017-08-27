@@ -1,17 +1,30 @@
-//Colors for background BEHIND quote box
-var bgColors = ['#FFC0E9', '#E4C0FF', '#C0D5FF', '#C0FBFF', '#C0FFCB', '#F5FFC0', '#FFD4C0', '#FFC0C0'];
-function inFrame() {
-  try {
-    return window.self !== window.top;
-  }
-  catch(e){
-    return true;
-  }
+  function get_doc(id){
+    const url = 'https://www.googleapis.com/drive/v3/files/'+id+'?alt=media'
+    if(self.fetch){
+    var setHeaders = new Headers();
+    setHeaders.append('Authorization', 'Bearer ' + authToken.access_token);
+    setHeaders.append('Content-Type', mime);
+
+    var setOptions = {
+        method: 'GET',
+        headers: setHeaders
+    };
+    fetch(url,setOptions)
+        .then(response => { if(response.ok){
+        var reader = response.body.getReader();
+        var decoder = new TextDecoder();
+        reader.read().then(function(result){
+            var data = {}
+            data = decoder.decode(result.value, {stream: !result.done});
+            console.log(data);
+    });
+        }
+    else{
+        console.log("Response wast not ok");
+    }
+  })  .catch(error => {
+        console.log("There is an error " + error.message);
+        });
+    }
 }
-function openURL(url){
-  window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1, location=0, statusbar=0, menubar=0,resizeable=0');
-}
-var currentQuote = '', currentAuthor = '';
-fucntion getQuote() {
-  
-}
+//FAMOUS QUOTES ID LIST: 19a5-0wJPg-vzM9XSQJhHY_3jRc5kqJiGyLwUw5G2Gkw
