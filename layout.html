@@ -1,18 +1,28 @@
 <div class="quote-box">
   <div class="quote-text">
-    <i class="quote-leftside"></i>
+    <i id="quote-leftside"></i>
     <span id="text"></span>
   </div>
   <div class="quote-author">
     <span id="author"></span>
   </div>
   <div class="share-buttons">
-    <a class="button" id="tweet" title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=quote"
-       data-size="large">Twitter<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <i class="share-tweet"></i>
+    <a class="button" id="tweet" onclick="tweet()">Tweet
+      <script type="text/javascript">
+        function tweet(){
+          var hrefPath = "https://twitter.com/intent/tweet?text=";
+          var quote = document.getElementById("quote-leftside").textContent;
+          hrefPath.concat(quote);
+          window.open(hrefPath);
+        }
+      </script>
     </a>
-    <a class="button" id="tumblr" title="Tumblr" target="_blank" href="https://www.tumblr.com/share">
-      <i class="share-tumblr"></i>Tumblr<script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+    <a class="button" id="tumblr" onclick="shareTumblr()">Tumblr
+      <script>
+        function shareTumblr(){
+          window.open("https://www.tumblr.com/share");
+        }
+      </script>
     </a>
     <button class="button" id="quote-button">Press for a new quote</button>
   </div>
