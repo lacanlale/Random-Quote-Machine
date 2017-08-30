@@ -1,12 +1,11 @@
-@import
-  url(https://fonts.googleapis.com/css?family=Pacifico);
-*{
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   vertical-align: baseline;
 }
-div{
+div {
   position: relative;
   z-index: 2;
 }
@@ -15,17 +14,17 @@ body {
   font-family: 'Pacifico', sans-serif;
   font-weight: 400;
 }
-.footer{
+.footer {
   width: 450px;
   text-align: center;
   display: block;
   margin: auto auto auto auto;
   color: #9E608E;
-  a{
+  a {
     color: #633D59;
   }
 }
-.quote-box{
+.quote-box {
   border-radius: 10px;
   position: relative;
   margin: 8% auto auto auto;
@@ -34,7 +33,7 @@ body {
   display: table;
   background-color: #FFB4EB;
   .quote-text {
-    i{
+    i {
       font-size: 1.0em;
       margin-right: 0.6em;
     }
@@ -45,7 +44,7 @@ body {
     font-weight: 500;
     font-size: 1.0em;
   }
-  .quote-author{
+  .quote-author {
     width: 500px;
     height: auto;
     clear: both;
@@ -57,7 +56,7 @@ body {
     width: 450px;
     margin: auto;
     display: block;
-    .button{
+    .button {
       height: 40px;
       border: none;
       border-radius: 4px;
@@ -69,10 +68,10 @@ body {
       margin-top: 30px;
       opacity: 2;
       cursor: pointer;
-      &:hover{
+      &:hover {
         opacity: 0.6;
       }
-      &#tumblr, &#tweet{
+      &#tumblr, &#tweet {
         float: left;
         padding: 0px;
         padding-top: 8px;
@@ -82,7 +81,7 @@ body {
         height: 30px;
         width: 40px;
       }
-      &#quote-button{
+      &#quote-button {
         float: right;
         background-color: #9B4990;
       }
